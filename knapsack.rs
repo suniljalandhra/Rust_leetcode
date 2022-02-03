@@ -1,6 +1,6 @@
 use std::cmp::max;
 
-fn knapsack(wt:Vec<i32>,val:Vec<i32>,size: usize,cap: i32) -> i32{
+fn knapsack(wt:&Vec<i32>,val:&Vec<i32>,size: usize,cap: i32) -> i32{
     if size == 0||cap == 0 {
         return 0;
     }
@@ -13,5 +13,10 @@ fn knapsack(wt:Vec<i32>,val:Vec<i32>,size: usize,cap: i32) -> i32{
     
 }
 fn main(){
-    println!("hello world");
+    let  wt = vec![1,3,4,5];
+    let  val = vec![1,4,5,7];
+    let  cap = 7;
+    let  size:usize = 4;
+    let  x = knapsack(&wt, &val, size, cap);
+    println!("{}",x);
 }
